@@ -23,7 +23,7 @@ body {
   background: var(--violet-deep);
   color: var(--cream);
   overflow-x: hidden;
-  padding-bottom: calc(var(--footer-h) + 2.5rem);
+  padding-bottom: 0;
 }
 
 /* ===== NAV ===== */
@@ -236,8 +236,6 @@ body {
   border-top: 1px solid rgba(255,255,255,0.08);
   color: var(--cream);
   position: relative;
-  width: 100%;
-  left: 0;
   z-index: 10;
   padding: 18px 24px;
   background: #040405;
@@ -299,11 +297,11 @@ body {
 
 .footer-follow {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-start;
   text-align: left;
-  gap: 16px;
+  gap: 14px;
 }
 
 .footer-follow h4 {
@@ -1293,6 +1291,18 @@ cite {
 .receipt-row:last-child { border-bottom: none; }
 .receipt-row span { color: rgba(248,245,238,0.5); }
 .receipt-row strong { color: var(--cream); }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--violet-deep);
+  border-top: 1px solid rgba(201,162,39,0.15);
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(248,245,238,0.35);
+}
+.footer a { color: var(--gold); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
