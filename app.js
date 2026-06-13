@@ -27,18 +27,21 @@ function animateCounters() {
   document.querySelectorAll('.counter').forEach(el => {
     const target = Number(el.dataset.target) || 0;
     const duration = 1200;
-    const stepTime = Math.max(20, Math.floor(duration / target));
-    let current = 0;
+    const startTime = performance.now();
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
 
-    el.textContent = '0';
-    const timer = setInterval(() => {
-      current += 1;
-      el.textContent = current;
-      if (current >= target) {
-        clearInterval(timer);
+    const update = (timestamp) => {
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      el.textContent = Math.round(target * easeOut(progress));
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
         el.textContent = target;
       }
-    }, stepTime);
+    };
+
+    el.textContent = '0';
+    requestAnimationFrame(update);
   });
 }
 
