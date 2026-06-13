@@ -235,6 +235,8 @@ body {
   background: linear-gradient(180deg, rgba(14,14,30,0.95), rgba(12,12,26,0.98));
   border-top: 1px solid rgba(255,255,255,0.08);
   color: var(--cream);
+  position: relative;
+  z-index: 10;
   padding: 18px 24px;
   background: #040405;
 }
@@ -412,6 +414,10 @@ body {
 @media (max-width: 760px) {
   .site-footer {
     padding: 20px 18px;
+  }
+  /* Ensure footer doesn't overlay content on small screens */
+  body {
+    padding-bottom: 140px;
   }
   .site-footer .footer-inner {
     grid-template-columns: 1fr;
