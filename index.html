@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafiya Architect & Construct</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <a href="#home" class="nav-logo" onclick="showPage('home')">
+      <div class="logo-mark">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="20,2 38,38 2,38" fill="none" stroke="#C9A227" stroke-width="2.5"/>
+          <line x1="20" y1="2" x2="20" y2="38" stroke="#C9A227" stroke-width="1.5" opacity="0.5"/>
+          <line x1="2" y1="27" x2="38" y2="27" stroke="#C9A227" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="20" cy="20" r="3" fill="#C9A227"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">Rafiya</span>
+        <span class="logo-sub">Architect & Construct</span>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="showPage('home')">Home</a></li>
+      <li><a href="#about" onclick="showPage('about')">About</a></li>
+      <li><a href="#services" onclick="showPage('services')">Services</a></li>
+      <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
+      <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+      <li><button class="btn-pay" onclick="openPayment()">Pay Now</button></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PAGE: HOME ===== -->
+  <section class="page active" id="home">
+    <div class="hero">
+      <div class="hero-slash"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Building the Future — Since 2008</p>
+        <h1 class="hero-title">Architecture<br/><span class="gold">That Endures.</span></h1>
+        <p class="hero-desc">We design and construct spaces that merge structural integrity with bold vision — from residential masterpieces to landmark commercial towers.</p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="showPage('projects')">View Our Work</button>
+          <button class="btn-ghost" onclick="showPage('contact')">Start a Project</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-building">
+          <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" class="building-svg">
+            <!-- Ground -->
+            <rect x="0" y="480" width="400" height="20" fill="#C9A227" opacity="0.3"/>
+            <!-- Main Tower -->
+            <rect x="120" y="80" width="160" height="400" fill="#2D1B69" opacity="0.9"/>
+            <!-- Tower windows grid -->
+            <g fill="#C9A227" opacity="0.6">
+              <rect x="135" y="100" width="25" height="18"/><rect x="170" y="100" width="25" height="18"/><rect x="205" y="100" width="25" height="18"/><rect x="240" y="100" width="25" height="18"/>
+              <rect x="135" y="130" width="25" height="18"/><rect x="170" y="130" width="25" height="18"/><rect x="205" y="130" width="25" height="18"/><rect x="240" y="130" width="25" height="18"/>
+              <rect x="135" y="160" width="25" height="18"/><rect x="170" y="160" width="25" height="18"/><rect x="205" y="160" width="25" height="18"/><rect x="240" y="160" width="25" height="18"/>
+              <rect x="135" y="190" width="25" height="18"/><rect x="170" y="190" width="25" height="18"/><rect x="205" y="190" width="25" height="18"/><rect x="240" y="190" width="25" height="18"/>
+              <rect x="135" y="220" width="25" height="18"/><rect x="170" y="220" width="25" height="18"/><rect x="205" y="220" width="25" height="18"/><rect x="240" y="220" width="25" height="18"/>
+              <rect x="135" y="250" width="25" height="18"/><rect x="170" y="250" width="25" height="18"/><rect x="205" y="250" width="25" height="18"/><rect x="240" y="250" width="25" height="18"/>
+              <rect x="135" y="280" width="25" height="18"/><rect x="170" y="280" width="25" height="18"/><rect x="205" y="280" width="25" height="18"/><rect x="240" y="280" width="25" height="18"/>
+            </g>
+            <!-- Spire -->
+            <polygon points="200,10 220,80 180,80" fill="#C9A227"/>
+            <!-- Left wing -->
+            <rect x="60" y="200" width="60" height="280" fill="#1A1A2E" opacity="0.8"/>
+            <g fill="#C9A227" opacity="0.4">
+              <rect x="70" y="220" width="18" height="14"/><rect x="95" y="220" width="18" height="14"/>
+              <rect x="70" y="248" width="18" height="14"/><rect x="95" y="248" width="18" height="14"/>
+              <rect x="70" y="276" width="18" height="14"/><rect x="95" y="276" width="18" height="14"/>
+              <rect x="70" y="304" width="18" height="14"/><rect x="95" y="304" width="18" height="14"/>
+              <rect x="70" y="332" width="18" height="14"/><rect x="95" y="332" width="18" height="14"/>
+            </g>
+            <!-- Right wing -->
+            <rect x="280" y="240" width="60" height="240" fill="#1A1A2E" opacity="0.8"/>
+            <g fill="#C9A227" opacity="0.4">
+              <rect x="290" y="260" width="18" height="14"/><rect x="315" y="260" width="18" height="14"/>
+              <rect x="290" y="288" width="18" height="14"/><rect x="315" y="288" width="18" height="14"/>
+              <rect x="290" y="316" width="18" height="14"/><rect x="315" y="316" width="18" height="14"/>
+              <rect x="290" y="344" width="18" height="14"/><rect x="315" y="344" width="18" height="14"/>
+            </g>
+            <!-- Gold accent lines -->
+            <line x1="120" y1="80" x2="280" y2="80" stroke="#C9A227" stroke-width="2"/>
+            <line x1="120" y1="480" x2="280" y2="480" stroke="#C9A227" stroke-width="2"/>
+            <!-- Entrance -->
+            <rect x="175" y="400" width="50" height="80" fill="#C9A227" opacity="0.8"/>
+            <rect x="178" y="403" width="44" height="77" fill="#0d0a1a"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat"><span class="stat-num">250+</span><span class="stat-label">Projects Completed</span></div>
+      <div class="stat"><span class="stat-num">16</span><span class="stat-label">Years of Excellence</span></div>
+      <div class="stat"><span class="stat-num">42</span><span class="stat-label">Industry Awards</span></div>
+      <div class="stat"><span class="stat-num">8</span><span class="stat-label">Countries Served</span></div>
+    </div>
+
+    <!-- Why Us -->
+    <div class="section-block">
+      <div class="section-header">
+        <p class="eyebrow gold">Why Choose Us</p>
+        <h2>Design That Speaks.<br/>Structures That Last.</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">◈</div>
+          <h3>Visionary Design</h3>
+          <p>Every blueprint is an artistic statement. We translate your ambitions into architectural language that turns heads and stands centuries.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⬡</div>
+          <h3>Precision Engineering</h3>
+          <p>From soil analysis to structural load calculations, our engineering teams ensure every centimeter of your build is exact and safe.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◎</div>
+          <h3>Sustainable Builds</h3>
+          <p>We integrate green architecture — solar-ready designs, natural ventilation, and locally sourced materials — into every project.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◉</div>
+          <h3>End-to-End Delivery</h3>
+          <p>From concept sketches to ribbon-cutting, Rafiya handles everything: design, permits, construction, and interior finishing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="testimonial-block">
+      <div class="testimonial-slash"></div>
+      <blockquote>
+        <p>"Rafiya didn't just build our headquarters — they built a symbol of who we are. The result surpassed every expectation we had."</p>
+        <cite>— Ama Asante, CEO, GoldCoast Holdings</cite>
+      </blockquote>
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Rafiya Architect & Construct · <a href="https://raf-architect.com">raf-architect.com</a> · All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- ===== PAGE: ABOUT ===== -->
+  <section class="page" id="about">
+    <div class="page-hero">
+      <div class="page-hero-slash"></div>
+      <div class="page-hero-content">
+        <p class="eyebrow">Our Story</p>
+        <h1>Built on Vision.<br/><span class="gold">Driven by Craft.</span></h1>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text-block">
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>Founded in 2008 by principal architect <strong>Rafiya Mensah-Acquah</strong>, our firm has grown from a two-person studio in Accra into one of West Africa's most celebrated architectural practices. We believe architecture is the most public of the arts — every building is a gift (or a burden) to the city around it.</p>
+            <p>We take that responsibility seriously. Our 60-person team of architects, structural engineers, project managers, and interior designers works as a single unit — never outsourcing, always accountable.</p>
+            <p>Our portfolio spans luxury residences, mixed-use commercial towers, cultural institutions, and public infrastructure across Ghana, Nigeria, Senegal, and beyond.</p>
+          </div>
+          <div class="about-visual">
+            <div class="about-card-stack">
+              <div class="about-card ac1"><span class="big-num">2008</span><span class="card-label">Founded in Accra</span></div>
+              <div class="about-card ac2"><span class="big-num">60+</span><span class="card-label">Expert Professionals</span></div>
+              <div class="about-card ac3"><span class="big-num">8</span><span class="card-label">Countries Active</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-block">
+        <h2>Our Core Values</h2>
+        <div class="values-list">
+          <div class="value-item">
+            <span class="value-num">01</span>
+            <div>
+              <h3>Integrity in Every Joint</h3>
+              <p>We apply the same honesty to our structural connections as to our client relationships. No hidden costs, no corners cut.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-num">02</span>
+            <div>
+              <h3>Beauty as a Function</h3>
+              <p>Aesthetics are not decorative — they affect how people feel, work, and live. We design for both eye and soul.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-num">03</span>
+            <div>
+              <h3>Community First</h3>
+              <p>Every structure we raise exists in a community. We engage, listen, and design with the neighborhood in mind.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-num">04</span>
+            <div>
+              <h3>African Excellence</h3>
+              <p>We root our work in African spatial traditions, materials, and culture — producing work that is global in quality, African in spirit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-block">
+        <h2>Leadership Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #2D1B69, #C9A227)">RM</div>
+            <h3>Rafiya Mensah-Acquah</h3>
+            <p>Founder & Principal Architect</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #C9A227, #8B7355)">KA</div>
+            <h3>Kofi Asante</h3>
+            <p>Lead Structural Engineer</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #1A1A2E, #2D1B69)">EO</div>
+            <h3>Esi Owusu</h3>
+            <p>Head of Interiors</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #8B7355, #C9A227)">JB</div>
+            <h3>James Boateng</h3>
+            <p>Project Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Rafiya Architect & Construct · <a href="https://raf-architect.com">raf-architect.com</a> · All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- ===== PAGE: SERVICES ===== -->
+  <section class="page" id="services">
+    <div class="page-hero">
+      <div class="page-hero-slash"></div>
+      <div class="page-hero-content">
+        <p class="eyebrow">What We Do</p>
+        <h1>Full-Spectrum<br/><span class="gold">Architectural Services.</span></h1>
+      </div>
+    </div>
+
+    <div class="services-content">
+      <div class="services-intro">
+        <p>From initial concept to final handover, Rafiya offers an integrated suite of services that ensures your project is handled with precision, creativity, and accountability at every stage.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+              <rect x="5" y="5" width="50" height="50" rx="4" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <line x1="15" y1="20" x2="45" y2="20" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="15" y1="30" x2="35" y2="30" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="15" y1="40" x2="40" y2="40" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="5" y1="5" x2="55" y2="55" stroke="#C9A227" stroke-width="0.5" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3>Architectural Design</h3>
+          <p>Concept development, schematic design, design development, and construction documentation. We translate ideas into buildable, inspirable blueprints.</p>
+          <ul>
+            <li>Site analysis & feasibility</li>
+            <li>3D modeling & renderings</li>
+            <li>Building permit drawings</li>
+          </ul>
+          <p class="service-price">From <strong class="gold">GHS 15,000</strong></p>
+          <button class="btn-service" onclick="openPayment()">Get Quote</button>
+        </div>
+
+        <div class="service-item featured-service">
+          <span class="badge">Most Popular</span>
+          <div class="service-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+              <polygon points="30,5 55,50 5,50" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <line x1="30" y1="5" x2="30" y2="50" stroke="#C9A227" stroke-width="1.5" opacity="0.5"/>
+              <line x1="17" y1="27" x2="43" y2="27" stroke="#C9A227" stroke-width="1.5" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>Design & Build</h3>
+          <p>Our flagship integrated service — one contract, one team, full accountability. Design and construction managed seamlessly under one roof.</p>
+          <ul>
+            <li>Full project management</li>
+            <li>Structural engineering</li>
+            <li>MEP coordination</li>
+            <li>Interior design</li>
+          </ul>
+          <p class="service-price">From <strong class="gold">GHS 80,000</strong></p>
+          <button class="btn-service btn-featured" onclick="openPayment()">Start Now</button>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+              <circle cx="30" cy="30" r="24" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <circle cx="30" cy="30" r="8" fill="none" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="30" y1="6" x2="30" y2="22" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="30" y1="38" x2="30" y2="54" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="6" y1="30" x2="22" y2="30" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="38" y1="30" x2="54" y2="30" stroke="#C9A227" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Interior Architecture</h3>
+          <p>Spatial planning and interior design that harmonizes with the building's structural soul — functional, beautiful, unmistakably yours.</p>
+          <ul>
+            <li>Space planning</li>
+            <li>Material & finish selection</li>
+            <li>Furniture & lighting design</li>
+          </ul>
+          <p class="service-price">From <strong class="gold">GHS 8,000</strong></p>
+          <button class="btn-service" onclick="openPayment()">Get Quote</button>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+              <rect x="10" y="25" width="40" height="30" rx="2" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <polygon points="5,25 30,5 55,25" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <rect x="24" y="38" width="12" height="17" fill="none" stroke="#C9A227" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Residential Projects</h3>
+          <p>From bespoke family homes to luxury estates, we design living spaces that reflect the personalities and aspirations of those who inhabit them.</p>
+          <ul>
+            <li>Custom home design</li>
+            <li>Renovation & extensions</li>
+            <li>Landscape integration</li>
+          </ul>
+          <p class="service-price">From <strong class="gold">GHS 25,000</strong></p>
+          <button class="btn-service" onclick="openPayment()">Get Quote</button>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+              <rect x="5" y="15" width="50" height="40" rx="2" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <rect x="5" y="10" width="50" height="8" rx="1" fill="none" stroke="#C9A227" stroke-width="1.5"/>
+              <line x1="20" y1="55" x2="20" y2="15" stroke="#C9A227" stroke-width="1" opacity="0.5"/>
+              <line x1="40" y1="55" x2="40" y2="15" stroke="#C9A227" stroke-width="1" opacity="0.5"/>
+              <line x1="5" y1="35" x2="55" y2="35" stroke="#C9A227" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>Commercial & Corporate</h3>
+          <p>Office towers, retail complexes, hospitality, and mixed-use developments — designed to maximize ROI while making a civic contribution.</p>
+          <ul>
+            <li>Corporate HQ design</li>
+            <li>Mixed-use developments</li>
+            <li>Retail & hospitality</li>
+          </ul>
+          <p class="service-price">From <strong class="gold">GHS 150,000</strong></p>
+          <button class="btn-service" onclick="openPayment()">Get Quote</button>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+              <path d="M10,50 Q20,20 30,15 Q40,10 50,20" fill="none" stroke="#C9A227" stroke-width="2"/>
+              <circle cx="30" cy="30" r="5" fill="#C9A227"/>
+              <line x1="5" y1="50" x2="55" y2="50" stroke="#C9A227" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Consulting & Advisory</h3>
+          <p>Peer reviews, feasibility studies, expert witness services, and sustainability consultancy for projects managed by other firms.</p>
+          <ul>
+            <li>Design review & critique</li>
+            <li>Cost & feasibility analysis</li>
+            <li>Green building certification</li>
+          </ul>
+          <p class="service-price">From <strong class="gold">GHS 3,500</strong></p>
+          <button class="btn-service" onclick="openPayment()">Book Session</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Rafiya Architect & Construct · <a href="https://raf-architect.com">raf-architect.com</a> · All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- ===== PAGE: PROJECTS ===== -->
+  <section class="page" id="projects">
+    <div class="page-hero">
+      <div class="page-hero-slash"></div>
+      <div class="page-hero-content">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Landmarks<br/><span class="gold">We've Raised.</span></h1>
+      </div>
+    </div>
+
+    <div class="projects-content">
+      <div class="projects-filter">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('commercial', this)">Commercial</button>
+        <button class="filter-btn" onclick="filterProjects('residential', this)">Residential</button>
+        <button class="filter-btn" onclick="filterProjects('cultural', this)">Cultural</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-card" data-cat="commercial">
+          <div class="project-img" style="background: linear-gradient(135deg, #2D1B69 0%, #1A1A2E 100%)">
+            <div class="project-overlay">
+              <span class="project-tag">Commercial</span>
+              <svg viewBox="0 0 200 250" width="120" height="150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="10" width="120" height="240" fill="#3d2a8a" opacity="0.8"/>
+                <g fill="#C9A227" opacity="0.7">
+                  <rect x="50" y="25" width="20" height="15"/><rect x="80" y="25" width="20" height="15"/><rect x="110" y="25" width="20" height="15"/><rect x="140" y="25" width="20" height="15"/>
+                  <rect x="50" y="50" width="20" height="15"/><rect x="80" y="50" width="20" height="15"/><rect x="110" y="50" width="20" height="15"/><rect x="140" y="50" width="20" height="15"/>
+                  <rect x="50" y="75" width="20" height="15"/><rect x="80" y="75" width="20" height="15"/><rect x="110" y="75" width="20" height="15"/><rect x="140" y="75" width="20" height="15"/>
+                  <rect x="50" y="100" width="20" height="15"/><rect x="80" y="100" width="20" height="15"/><rect x="110" y="100" width="20" height="15"/><rect x="140" y="100" width="20" height="15"/>
+                </g>
+                <polygon points="100,0 160,10 40,10" fill="#C9A227"/>
+                <rect x="85" y="200" width="30" height="50" fill="#C9A227" opacity="0.6"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>GoldCoast Tower</h3>
+            <p>32-storey corporate headquarters, Accra CBD</p>
+            <span class="project-year">2022</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="residential">
+          <div class="project-img" style="background: linear-gradient(135deg, #8B7355 0%, #2D1B69 100%)">
+            <div class="project-overlay">
+              <span class="project-tag">Residential</span>
+              <svg viewBox="0 0 200 250" width="120" height="150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="100" width="160" height="150" fill="#3d2a8a" opacity="0.8"/>
+                <polygon points="10,100 100,30 190,100" fill="#2D1B69"/>
+                <line x1="10" y1="100" x2="190" y2="100" stroke="#C9A227" stroke-width="2"/>
+                <g fill="#C9A227" opacity="0.6">
+                  <rect x="35" y="120" width="30" height="25"/><rect x="80" y="120" width="30" height="25"/><rect x="135" y="120" width="30" height="25"/>
+                  <rect x="35" y="160" width="30" height="25"/><rect x="135" y="160" width="30" height="25"/>
+                </g>
+                <rect x="80" y="175" width="40" height="75" fill="#C9A227" opacity="0.7"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Villa Serena Estate</h3>
+            <p>12-unit luxury residential compound, East Legon</p>
+            <span class="project-year">2023</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="cultural">
+          <div class="project-img" style="background: linear-gradient(135deg, #1A1A2E 0%, #C9A227 200%)">
+            <div class="project-overlay">
+              <span class="project-tag">Cultural</span>
+              <svg viewBox="0 0 200 250" width="120" height="150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="150" width="180" height="100" fill="#1A1A2E" opacity="0.9"/>
+                <rect x="30" y="80" width="140" height="70" fill="#2D1B69" opacity="0.8"/>
+                <rect x="60" y="30" width="80" height="50" fill="#2D1B69" opacity="0.7"/>
+                <g fill="#C9A227" opacity="0.8">
+                  <rect x="20" y="155" width="15" height="40"/><rect x="45" y="155" width="15" height="40"/>
+                  <rect x="80" y="155" width="15" height="40"/><rect x="105" y="155" width="15" height="40"/>
+                  <rect x="140" y="155" width="15" height="40"/><rect x="165" y="155" width="15" height="40"/>
+                </g>
+                <rect x="75" y="35" width="50" height="3" fill="#C9A227"/>
+                <polygon points="100,5 120,35 80,35" fill="#C9A227"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Kotoka Arts Centre</h3>
+            <p>National cultural & performing arts venue, Accra</p>
+            <span class="project-year">2021</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="commercial">
+          <div class="project-img" style="background: linear-gradient(135deg, #2D1B69 30%, #8B7355 100%)">
+            <div class="project-overlay">
+              <span class="project-tag">Commercial</span>
+              <svg viewBox="0 0 200 250" width="120" height="150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="50" width="80" height="200" fill="#2D1B69" opacity="0.9"/>
+                <rect x="110" y="90" width="80" height="160" fill="#3d2a8a" opacity="0.9"/>
+                <g fill="#C9A227" opacity="0.5">
+                  <rect x="20" y="60" width="15" height="12"/><rect x="45" y="60" width="15" height="12"/><rect x="70" y="60" width="15" height="12"/>
+                  <rect x="20" y="85" width="15" height="12"/><rect x="45" y="85" width="15" height="12"/><rect x="70" y="85" width="15" height="12"/>
+                  <rect x="20" y="110" width="15" height="12"/><rect x="45" y="110" width="15" height="12"/><rect x="70" y="110" width="15" height="12"/>
+                  <rect x="120" y="100" width="15" height="12"/><rect x="145" y="100" width="15" height="12"/><rect x="170" y="100" width="15" height="12"/>
+                  <rect x="120" y="125" width="15" height="12"/><rect x="145" y="125" width="15" height="12"/><rect x="170" y="125" width="15" height="12"/>
+                </g>
+                <line x1="10" y1="50" x2="190" y2="50" stroke="#C9A227" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Tema Industrial Hub</h3>
+            <p>Mixed-use commercial & logistics campus, Tema</p>
+            <span class="project-year">2023</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="residential">
+          <div class="project-img" style="background: linear-gradient(135deg, #C9A227 0%, #2D1B69 100%)">
+            <div class="project-overlay">
+              <span class="project-tag">Residential</span>
+              <svg viewBox="0 0 200 250" width="120" height="150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="80" width="70" height="170" fill="#2D1B69" opacity="0.9"/>
+                <rect x="110" y="110" width="70" height="140" fill="#3d2a8a" opacity="0.9"/>
+                <rect x="50" y="40" width="100" height="50" fill="#1A1A2E" opacity="0.8"/>
+                <g fill="#C9A227" opacity="0.6">
+                  <rect x="30" y="95" width="20" height="16"/><rect x="60" y="95" width="20" height="16"/>
+                  <rect x="30" y="125" width="20" height="16"/><rect x="60" y="125" width="20" height="16"/>
+                  <rect x="30" y="155" width="20" height="16"/><rect x="60" y="155" width="20" height="16"/>
+                  <rect x="120" y="125" width="20" height="16"/><rect x="150" y="125" width="20" height="16"/>
+                  <rect x="120" y="155" width="20" height="16"/><rect x="150" y="155" width="20" height="16"/>
+                </g>
+                <rect x="70" y="210" width="60" height="40" fill="#C9A227" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Cantonments Penthouse</h3>
+            <p>Bespoke 3-storey luxury residence, Cantonments</p>
+            <span class="project-year">2024</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="cultural">
+          <div class="project-img" style="background: linear-gradient(135deg, #8B7355 0%, #1A1A2E 100%)">
+            <div class="project-overlay">
+              <span class="project-tag">Cultural</span>
+              <svg viewBox="0 0 200 250" width="120" height="150" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="100" cy="100" rx="90" ry="60" fill="none" stroke="#C9A227" stroke-width="2"/>
+                <rect x="30" y="100" width="140" height="150" fill="#2D1B69" opacity="0.8"/>
+                <g fill="#C9A227" opacity="0.5">
+                  <rect x="40" y="115" width="15" height="12"/><rect x="65" y="115" width="15" height="12"/><rect x="90" y="115" width="15" height="12"/><rect x="115" y="115" width="15" height="12"/><rect x="140" y="115" width="15" height="12"/>
+                  <rect x="40" y="140" width="15" height="12"/><rect x="65" y="140" width="15" height="12"/><rect x="90" y="140" width="15" height="12"/><rect x="115" y="140" width="15" height="12"/><rect x="140" y="140" width="15" height="12"/>
+                </g>
+                <line x1="30" y1="250" x2="170" y2="250" stroke="#C9A227" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Kumasi Museum of History</h3>
+            <p>Regional heritage museum & research centre, Kumasi</p>
+            <span class="project-year">2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Rafiya Architect & Construct · <a href="https://raf-architect.com">raf-architect.com</a> · All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- ===== PAGE: CONTACT ===== -->
+  <section class="page" id="contact">
+    <div class="page-hero">
+      <div class="page-hero-slash"></div>
+      <div class="page-hero-content">
+        <p class="eyebrow">Get In Touch</p>
+        <h1>Let's Build<br/><span class="gold">Something Great.</span></h1>
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-grid">
+        <div class="contact-form-block">
+          <h2>Send Us a Message</h2>
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Ama" />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Asante" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="ama@example.com" />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+233 20 000 0000" />
+            </div>
+            <div class="form-group">
+              <label>Service Interested In</label>
+              <select>
+                <option>Architectural Design</option>
+                <option>Design & Build</option>
+                <option>Interior Architecture</option>
+                <option>Residential Project</option>
+                <option>Commercial Project</option>
+                <option>Consulting</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Project Brief</label>
+              <textarea placeholder="Tell us about your vision, budget, timeline, and site..."></textarea>
+            </div>
+            <button class="btn-primary btn-full" onclick="submitForm()">Send Message →</button>
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <h2>Find Us</h2>
+          <!-- Live Google Map -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.979558855248!2d-0.18673832414763!3d5.5571965940386145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2d34a3f%3A0xd3e5f7a0b5f8b3c!2sCantonments%2C%20Accra!5e0!3m2!1sen!2sgh!4v1711000000000!5m2!1sen!2sgh"
+              width="100%"
+              height="300"
+              style="border:0; border-radius:8px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Rafiya Architect & Construct — Accra Office">
+            </iframe>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="detail-icon">📍</span>
+              <div>
+                <strong>Head Office</strong>
+                <p>14 Liberation Road, Cantonments<br/>Accra, Ghana</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="detail-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+233 30 291 4455<br/>+233 24 810 0033</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="detail-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>hello@raf-architect.com<br/>projects@raf-architect.com</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="detail-icon">⏰</span>
+              <div>
+                <strong>Office Hours</strong>
+                <p>Mon–Fri: 8:00am – 6:00pm<br/>Sat: 9:00am – 2:00pm</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-primary btn-full" onclick="openPayment()" style="margin-top: 1.5rem;">Make a Payment</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2024 Rafiya Architect & Construct · <a href="https://raf-architect.com">raf-architect.com</a> · All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- ===== PAYMENT MODAL ===== -->
+  <div class="modal-overlay" id="paymentModal" onclick="closePaymentOnOverlay(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closePayment()">✕</button>
+      <div class="modal-header">
+        <div class="modal-logo">
+          <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,38 2,38" fill="none" stroke="#C9A227" stroke-width="2.5"/>
+            <circle cx="20" cy="20" r="3" fill="#C9A227"/>
+          </svg>
+        </div>
+        <div>
+          <h2>Secure Payment</h2>
+          <p>Rafiya Architect & Construct</p>
+        </div>
+      </div>
+
+      <div class="payment-steps">
+        <div class="step active" id="step1">
+          <h3>Payment Details</h3>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="payName" placeholder="Ama Asante" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="payEmail" placeholder="ama@example.com" />
+          </div>
+          <div class="form-group">
+            <label>Payment For</label>
+            <select id="payService">
+              <option>Initial Consultation Fee</option>
+              <option>Design Retainer (50%)</option>
+              <option>Construction Milestone 1</option>
+              <option>Construction Milestone 2</option>
+              <option>Project Completion Balance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Amount (GHS)</label>
+            <input type="number" id="payAmount" placeholder="5000" />
+          </div>
+          <button class="btn-primary btn-full" onclick="goToCardDetails()">Continue →</button>
+          <p class="pay-note">🔒 Payments are processed securely via Paystack</p>
+        </div>
+
+        <div class="step" id="step2">
+          <h3>Card Information</h3>
+          <div class="card-preview" id="cardPreview">
+            <div class="card-chip"></div>
+            <div class="card-number-display" id="cardNumDisplay">•••• •••• •••• ••••</div>
+            <div class="card-bottom">
+              <div><span>CARDHOLDER</span><strong id="cardNameDisplay">YOUR NAME</strong></div>
+              <div><span>EXPIRES</span><strong id="cardExpDisplay">MM/YY</strong></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" id="cardNum" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Expiry Date</label>
+              <input type="text" id="cardExp" placeholder="MM/YY" maxlength="5" oninput="formatExp(this)" />
+            </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input type="text" id="cardCvv" placeholder="123" maxlength="3" />
+            </div>
+          </div>
+          <div class="pay-methods">
+            <span>We accept:</span>
+            <div class="pay-icons">
+              <span class="pay-badge">VISA</span>
+              <span class="pay-badge">Mastercard</span>
+              <span class="pay-badge">MTN MoMo</span>
+              <span class="pay-badge">Vodafone Cash</span>
+            </div>
+          </div>
+          <button class="btn-primary btn-full" onclick="processPayment()">Pay Now →</button>
+          <button class="btn-back" onclick="goBack()">← Back</button>
+        </div>
+
+        <div class="step" id="step3">
+          <div class="success-block">
+            <div class="success-icon">✓</div>
+            <h3>Payment Successful!</h3>
+            <p>Thank you for your payment. A receipt has been sent to your email.</p>
+            <div class="receipt">
+              <div class="receipt-row"><span>Reference</span><strong id="receiptRef">RAF-000000</strong></div>
+              <div class="receipt-row"><span>Amount</span><strong id="receiptAmount">GHS 0</strong></div>
+              <div class="receipt-row"><span>Service</span><strong id="receiptService">—</strong></div>
+              <div class="receipt-row"><span>Status</span><strong class="gold">Confirmed ✓</strong></div>
+            </div>
+            <button class="btn-primary btn-full" onclick="closePayment()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
