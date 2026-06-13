@@ -235,7 +235,7 @@ body {
   background: linear-gradient(180deg, rgba(14,14,30,0.95), rgba(12,12,26,0.98));
   border-top: 1px solid rgba(255,255,255,0.08);
   color: var(--cream);
-  padding: 24px 30px;
+  padding: 18px 24px;
   background: #040405;
 }
 
@@ -244,8 +244,8 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1.6fr 1fr 1fr minmax(160px, 1fr);
+  gap: 18px;
   align-items: start;
 }
 
@@ -294,8 +294,29 @@ body {
 }
 
 .footer-follow {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  text-align: right;
+  gap: 14px;
+}
+
+.footer-follow h4 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-follow .social-links {
+  order: 0;
+}
+
+.footer-follow .footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .footer-column ul,
