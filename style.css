@@ -297,8 +297,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
-  text-align: right;
+  justify-content: flex-start;
+  text-align: left;
   gap: 14px;
 }
 
@@ -308,14 +308,14 @@ body {
 }
 
 .footer-follow .social-links {
-  order: 0;
+  order: 1;
 }
 
 .footer-follow .footer-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
 }
 
