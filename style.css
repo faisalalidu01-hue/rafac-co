@@ -48,19 +48,17 @@ body {
   cursor: pointer;
 }
 .logo-mark {
-  width: 48px;
-  height: 48px;
+  width: 270px;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.logo-mark svg {
+.logo-mark img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
-.logo-text { display: flex; flex-direction: column; }
-.logo-main { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--gold); letter-spacing: 0.05em; line-height: 1; }
-.logo-sub { font-size: 0.72rem; color: rgba(248,245,238,0.78); letter-spacing: 0.15em; text-transform: uppercase; }
 
 .nav-links {
   display: flex;
