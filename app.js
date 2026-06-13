@@ -5,6 +5,7 @@ function showPage(pageId) {
   if (target) {
     target.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (pageId === 'home') animateCounters();
   }
   // Update active nav link
   document.querySelectorAll('.nav-links a').forEach(a => {
@@ -20,6 +21,25 @@ function showPage(pageId) {
 // ===== MOBILE MENU =====
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
+}
+
+function animateCounters() {
+  document.querySelectorAll('.counter').forEach(el => {
+    const target = Number(el.dataset.target) || 0;
+    const duration = 1200;
+    const stepTime = Math.max(20, Math.floor(duration / target));
+    let current = 0;
+
+    el.textContent = '0';
+    const timer = setInterval(() => {
+      current += 1;
+      el.textContent = current;
+      if (current >= target) {
+        clearInterval(timer);
+        el.textContent = target;
+      }
+    }, stepTime);
+  });
 }
 
 // ===== NAVBAR SCROLL EFFECT =====
