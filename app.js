@@ -21,6 +21,7 @@ function showPage(pageId) {
 // ===== MOBILE MENU =====
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
 }
 
 function animateCounters() {
